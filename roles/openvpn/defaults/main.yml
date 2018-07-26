@@ -1,0 +1,12 @@
+---
+openvpn_dev_type: tun
+openvpn_server_address: 8.8.8.8
+openvpn_server_port: 1194
+openvpn_server_proto: udp
+openvpn_config_dir: /etc/openvpn
+openvpn_config_file: client.conf
+openvpn_file_key: client.key
+openvpn_file_cert: client.crt
+openvpn_file_ca: ca.crt
+openvpn_file_tls_auth: ta.key
+

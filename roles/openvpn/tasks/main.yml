@@ -1,0 +1,18 @@
+---
+- name: Uninstall OpenVPN
+  include_tasks: uninstall.yml
+
+- name: install OpenVPN
+  include_tasks: install.yml
+
+- name: copy server keys
+  include_tasks: server_keys.yml
+
+- name: copy client keys
+  include_tasks: client_keys.yml
+
+- name: create config
+  include_tasks: config.yml
+
+- name: start openvpn service
+  include_tasks: start_service.yml

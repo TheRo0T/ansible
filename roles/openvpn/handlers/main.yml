@@ -1,0 +1,15 @@
+---
+- name: start service openvpn, if not running
+  service: 
+    name: openvpn
+    state: started
+
+- name: stop service openvpn, if running
+  service:
+    name: openvpn
+    state: stopped
+
+- name: Restart service openvpn, in all cases
+  service:
+    name: openvpn
+    state: restarted

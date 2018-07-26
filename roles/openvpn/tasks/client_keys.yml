@@ -1,0 +1,17 @@
+---
+- name: copying client certificates
+  copy:
+    src: "{{ ansible_hostname }}.crt"
+    dest: "{{ openvpn_config_dir }}/{{ ansible_hostname }}.crt"
+    owner: root
+    group: root
+    mode: 0644
+
+- name: copying client key
+  copy:
+    src: "{{ ansible_hostname }}.key"
+    dest: "{{ openvpn_config_dir }}/{{ openvpn_file_tls_auth }}"
+    owner: root
+    group: root
+    mode: 0644
+

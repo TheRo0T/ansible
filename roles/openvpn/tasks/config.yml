@@ -1,0 +1,7 @@
+---
+- name: Create openvpn config file
+  template:
+    src: client.conf.j2
+    dest: "{{ openvpn_config_dir }}/{{openvpn_config_file}}"
+    owner: root
+    group: root

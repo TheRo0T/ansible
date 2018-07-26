@@ -1,0 +1,17 @@
+---
+- name: copying ca sertificates
+  copy:
+    src: ca.crt
+    dest: "{{ openvpn_config_dir }}/{{ openvpn_file_ca }}"
+    owner: root
+    group: root
+    mode: 0644
+
+- name: copying ta key
+  copy:
+    src: ta.key
+    dest: "{{ openvpn_config_dir }}/{{ openvpn_file_tls_auth }}"
+    owner: root
+    group: root
+    mode: 0644
+

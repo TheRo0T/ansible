@@ -1,0 +1,10 @@
+---
+- name: Wipe out config directory
+  file:
+    path: "{{ openvpn_config_dir }}"
+    state: absent
+
+- name: Uninstall OpenVPN
+  apt:
+    name: openvpn
+    state: absent

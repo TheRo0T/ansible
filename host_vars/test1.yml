@@ -1,0 +1,8 @@
+---
+openvpn_dev_type: tun
+openvpn_server_address: 8.8.8.8
+openvpn_server_port: 1195
+openvpn_server_proto: tcp
+openvpn_config_file: "{{ ansible_hostname }}.conf"
+openvpn_file_key: "{{ ansible_hostname }}.key"
+openvpn_file_cert: "{{ ansible_hostname }}.crt"
